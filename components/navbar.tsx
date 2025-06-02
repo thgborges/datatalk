@@ -3,13 +3,14 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Database, Heart, Home, Shield, Stethoscope, SmileIcon as Tooth, Umbrella } from "lucide-react"
+import { Database, Heart, Home, Shield, Stethoscope, SmileIcon as Tooth, Umbrella, BarChart3 } from "lucide-react"
 
 export function Navbar() {
   const pathname = usePathname()
 
   const segments = [
     { name: "Home", icon: Home, path: "/" },
+    { name: "Dashboard", icon: BarChart3, path: "/dashboard" },
     { name: "Saúde", icon: Stethoscope, path: "/segmentos/saude" },
     { name: "Odonto", icon: Tooth, path: "/segmentos/odonto" },
     { name: "Vida", icon: Heart, path: "/segmentos/vida" },

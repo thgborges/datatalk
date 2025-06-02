@@ -28,4 +28,3 @@ Transforme suas consultas de metadados em conversas inteligentes.
 - Backend: Node.js + Inteligência Artificial para NLP (via APIs/LLMs)
 - Banco de Dados: Integração com metadados de bancos SQL
 - Deploy: [Vercel](https://vercel.com/)
-

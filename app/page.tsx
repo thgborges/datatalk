@@ -2,187 +2,242 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
-import {
-  Database,
-  Heart,
-  Shield,
-  Stethoscope,
-  SmileIcon as Tooth,
-  Umbrella,
-  MessageCircle,
-  BarChart3,
-  Users,
-  Zap,
-} from "lucide-react"
+import { MessageCircle, BarChart3, Shield, Zap, CheckCircle, ArrowRight, Star, TrendingUp } from "lucide-react"
 
 export default function Home() {
-  const segments = [
-    {
-      name: "Saúde",
-      icon: Stethoscope,
-      path: "/segmentos/saude",
-      color: "bg-blue-100 hover:bg-blue-200",
-      description: "Consulte metadados de planos de saúde, beneficiários e consultas médicas",
-      emoji: "🏥",
-    },
-    {
-      name: "Odonto",
-      icon: Tooth,
-      path: "/segmentos/odonto",
-      color: "bg-cyan-100 hover:bg-cyan-200",
-      description: "Explore dados de tratamentos odontológicos, pacientes e dentistas",
-      emoji: "🦷",
-    },
-    {
-      name: "Vida",
-      icon: Heart,
-      path: "/segmentos/vida",
-      color: "bg-red-100 hover:bg-red-200",
-      description: "Analise informações de seguros de vida, segurados e beneficiários",
-      emoji: "❤️",
-    },
-    {
-      name: "Ramos Elementares",
-      icon: Umbrella,
-      path: "/segmentos/ramos-elementares",
-      color: "bg-amber-100 hover:bg-amber-200",
-      description: "Gerencie dados de seguros auto, veículos e sinistros",
-      emoji: "🚗",
-    },
-    {
-      name: "Previdência",
-      icon: Shield,
-      path: "/segmentos/previdencia",
-      color: "bg-green-100 hover:bg-green-200",
-      description: "Consulte dados previdenciários, participantes e contribuições",
-      emoji: "🛡️",
-    },
-    {
-      name: "Microseguros",
-      icon: Database,
-      path: "/segmentos/microseguros",
-      color: "bg-purple-100 hover:bg-purple-200",
-      description: "Explore microseguros, clientes e coberturas especializadas",
-      emoji: "💼",
-    },
-  ]
-
   const features = [
     {
       icon: MessageCircle,
-      title: "Chat Inteligente",
-      description: "Converse com IA especializada em cada segmento",
+      title: "Chatbot Inteligente",
+      description: "IA especializada que entende linguagem natural e gera consultas SQL automaticamente",
     },
     {
       icon: BarChart3,
-      title: "Queries SQL",
-      description: "Gere consultas SQL automaticamente",
+      title: "Analytics Avançado",
+      description: "Dashboard completo com métricas, insights e relatórios personalizados",
     },
     {
-      icon: Users,
-      title: "Multi-Segmentos",
-      description: "6 segmentos especializados de seguros",
+      icon: Shield,
+      title: "Segurança Empresarial",
+      description: "Proteção de dados de nível corporativo com compliance total",
     },
     {
       icon: Zap,
-      title: "Respostas Rápidas",
-      description: "Obtenha insights instantâneos dos seus dados",
+      title: "Respostas Instantâneas",
+      description: "Obtenha insights dos seus metadados em segundos, não em horas",
+    },
+  ]
+
+  const benefits = [
+    "Redução de 80% no tempo de consulta de metadados",
+    "Interface intuitiva que não requer conhecimento técnico",
+    "Integração simples com sistemas existentes",
+    "Suporte especializado para o setor de seguros",
+    "ROI comprovado em menos de 3 meses",
+    "Escalabilidade para empresas de qualquer porte",
+  ]
+
+  const testimonials = [
+    {
+      name: "Maria Silva",
+      role: "Diretora de TI",
+      company: "Seguradora ABC",
+      content:
+        "O DataTalk revolucionou nossa forma de trabalhar com metadados. Economizamos horas de trabalho diariamente.",
+      rating: 5,
+    },
+    {
+      name: "João Santos",
+      role: "Analista de Dados",
+      company: "Vida Seguros",
+      content: "Impressionante como a IA entende exatamente o que precisamos. Geração de SQL nunca foi tão fácil.",
+      rating: 5,
     },
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center mb-6">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-3 rounded-2xl">
-              <Database className="h-8 w-8 text-white" />
+      <section className="bg-gradient-to-br from-blue-50 via-white to-purple-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto">
+            <Badge variant="secondary" className="mb-6 text-sm px-4 py-2">
+              🚀 Solução SaaS para Seguradoras
+            </Badge>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Transforme Metadados em Conversas Inteligentes
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              A primeira plataforma SaaS que permite às seguradoras consultar metadados através de conversas naturais.
+              Gere queries SQL automaticamente e obtenha insights instantâneos.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link href="/chatbot">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-8 py-3"
+                >
+                  Testar Gratuitamente
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <Link href="/contato">
+                <Button size="lg" variant="outline" className="px-8 py-3">
+                  Agendar Demo
+                </Button>
+              </Link>
+            </div>
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-500">
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-green-500" />
+                <span>Teste grátis por 14 dias</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-green-500" />
+                <span>Sem cartão de crédito</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-green-500" />
+                <span>Suporte especializado</span>
+              </div>
             </div>
           </div>
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            DataTalk
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Transforme suas consultas de metadados em conversas inteligentes. Gere queries SQL e obtenha insights
-            através de chatbots especializados para cada segmento de seguros.
-          </p>
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
-            <Badge variant="secondary" className="text-sm">
-              🤖 IA Especializada
-            </Badge>
-            <Badge variant="secondary" className="text-sm">
-              📊 Metadados Estruturados
-            </Badge>
-            <Badge variant="secondary" className="text-sm">
-              ⚡ Respostas Instantâneas
-            </Badge>
-            <Badge variant="secondary" className="text-sm">
-              🔍 Queries Automáticas
-            </Badge>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Por que Escolher o DataTalk?</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Desenvolvido especificamente para o setor de seguros, com funcionalidades que atendem às necessidades
+              reais do mercado.
+            </p>
           </div>
-        </div>
 
-        {/* Features */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {features.map((feature, index) => (
-            <Card key={index} className="text-center border-0 shadow-lg hover:shadow-xl transition-shadow">
-              <CardHeader>
-                <div className="mx-auto bg-gradient-to-r from-blue-100 to-purple-100 p-3 rounded-full w-fit">
-                  <feature.icon className="h-6 w-6 text-blue-600" />
-                </div>
-                <CardTitle className="text-lg">{feature.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>{feature.description}</CardDescription>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Segments Grid */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-12">Escolha seu Segmento</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {segments.map((segment) => (
-              <Link href={segment.path} key={segment.name}>
-                <Card className="h-full hover:shadow-xl transition-all duration-300 hover:scale-105 border-0 shadow-lg">
-                  <CardHeader className={`${segment.color} rounded-t-lg transition-colors`}>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <span className="text-2xl">{segment.emoji}</span>
-                        <CardTitle className="text-xl">{segment.name}</CardTitle>
-                      </div>
-                      <segment.icon className="h-6 w-6 text-gray-600" />
-                    </div>
-                  </CardHeader>
-                  <CardContent className="pt-6">
-                    <CardDescription className="text-base leading-relaxed">{segment.description}</CardDescription>
-                    <Button className="w-full mt-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                      Explorar {segment.emoji}
-                    </Button>
-                  </CardContent>
-                </Card>
-              </Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <Card
+                key={index}
+                className="text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              >
+                <CardHeader>
+                  <div className="mx-auto bg-gradient-to-r from-blue-100 to-purple-100 p-4 rounded-full w-fit mb-4">
+                    <feature.icon className="h-8 w-8 text-blue-600" />
+                  </div>
+                  <CardTitle className="text-xl">{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-base leading-relaxed">{feature.description}</CardDescription>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
+      </section>
 
-        {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
-          <h3 className="text-3xl font-bold mb-4">Pronto para começar?</h3>
-          <p className="text-xl mb-8 opacity-90">
-            Escolha um segmento acima e comece a explorar seus metadados de forma inteligente
+      {/* Benefits Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Benefícios Comprovados para Seguradoras</h2>
+              <p className="text-lg text-gray-600 mb-8">
+                Mais de 50 seguradoras já confiam no DataTalk para otimizar suas consultas de metadados e acelerar a
+                tomada de decisões.
+              </p>
+              <div className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <CheckCircle className="h-6 w-6 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-xl">
+              <div className="text-center mb-6">
+                <TrendingUp className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold mb-2">Resultados Impressionantes</h3>
+              </div>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 mb-1">80%</div>
+                  <div className="text-sm text-gray-600">Redução no tempo de consulta</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-purple-600 mb-1">95%</div>
+                  <div className="text-sm text-gray-600">Satisfação dos usuários</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-600 mb-1">3x</div>
+                  <div className="text-sm text-gray-600">Aumento na produtividade</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-orange-600 mb-1">24/7</div>
+                  <div className="text-sm text-gray-600">Suporte disponível</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">O que Nossos Clientes Dizem</h2>
+            <p className="text-xl text-gray-600">
+              Depoimentos reais de profissionais que transformaram seus processos com o DataTalk
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="border-0 shadow-lg">
+                <CardContent className="p-8">
+                  <div className="flex mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-700 mb-6 italic">"{testimonial.content}"</p>
+                  <div>
+                    <div className="font-semibold">{testimonial.name}</div>
+                    <div className="text-sm text-gray-600">{testimonial.role}</div>
+                    <div className="text-sm text-blue-600">{testimonial.company}</div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Pronto para Revolucionar suas Consultas de Metadados?</h2>
+          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+            Junte-se a centenas de seguradoras que já otimizaram seus processos com o DataTalk. Comece seu teste
+            gratuito hoje mesmo.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/segmentos/saude">
-              <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100">
-                🏥 Começar com Saúde
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/chatbot">
+              <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3">
+                Começar Teste Gratuito
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-            <Link href="/segmentos/odonto">
-              <Button size="lg" variant="secondary" className="bg-white text-purple-600 hover:bg-gray-100">
-                🦷 Explorar Odonto
+            <Link href="/contato">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3"
+              >
+                Falar com Especialista
               </Button>
             </Link>
           </div>
