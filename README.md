@@ -1,30 +1,31 @@
-# Datatalk integration requiremen
+# DataTalk
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+Transforme suas consultas de metadados em conversas inteligentes.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/thgborges-projects/v0-datatalk-integration-requiremen)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/XA1OjIXFL2p)
+[👉 Acesse o projeto em produção](https://datatalk.vercel.app/)
 
-## Overview
+## 💡 Visão Geral
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+**DataTalk** é uma plataforma inovadora que permite aos usuários **"falar com seus metadados"**. Por meio de uma interface de chatbot intuitiva e customizada para o setor de **seguros**, a ferramenta converte conversas naturais em **consultas SQL inteligentes**, oferecendo **insights em tempo real** de maneira simples, rápida e acessível.
 
-## Deployment
+## 🚀 Funcionalidades
 
-Your project is live at:
+- 🤖 Chatbot inteligente com suporte a linguagem natural
+- 🏢 Customização por segmento e tipo de seguradora
+- 🧠 Geração automática de queries SQL a partir da conversa
+- 📊 Entrega de insights e visualizações baseadas nos dados consultados
+- 🌐 Interface web responsiva e amigável
 
-**[https://vercel.com/thgborges-projects/v0-datatalk-integration-requiremen](https://vercel.com/thgborges-projects/v0-datatalk-integration-requiremen)**
+## 🧩 Casos de Uso
 
-## Build your app
+- Executivos de seguros podem obter análises rápidas sem depender de times técnicos
+- Analistas podem acelerar suas investigações e obter sugestões de queries
+- Ferramenta útil para treinamento, exploração e validação de bases internas
 
-Continue building your app on:
+## ⚙️ Tecnologias Utilizadas
 
-**[https://v0.dev/chat/projects/XA1OjIXFL2p](https://v0.dev/chat/projects/XA1OjIXFL2p)**
+- Frontend: Next.js + Tailwind CSS
+- Backend: Node.js + Inteligência Artificial para NLP (via APIs/LLMs)
+- Banco de Dados: Integração com metadados de bancos SQL
+- Deploy: [Vercel](https://vercel.com/)
 
-## How It Works
-
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
