@@ -84,8 +84,11 @@ O DataTalk cuida de tudo: interpretação, geração de SQL e entrega do insight
 ## 📸 Preview
 
 <p align="center">
+
+  ### Tela Principal
 <img width="1532" height="857" alt="image" src="https://github.com/user-attachments/assets/fb243964-5c6e-4415-8de5-cec8f2f95355" />
 
+  ### Como Funciona
 <img width="1530" height="839" alt="image" src="https://github.com/user-attachments/assets/80cbbfa0-f9de-4180-bf5a-041fecb3513e" />
 </p>
 
