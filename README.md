@@ -106,38 +106,6 @@ datatalk/
 
 ---
 
-## ⚙️ Como Rodar o Projeto
-
-### 1. Clone o repositório
-
-```bash
-git clone https://github.com/seu-usuario/datatalk.git
-cd datatalk
-```
-
-### 2. Instale as dependências
-
-```bash
-npm install
-```
-
-### 3. Configure as variáveis de ambiente
-
-Crie um arquivo `.env`:
-
-```
-MONGO_URI=your_mongodb_connection
-PORT=3000
-```
-
-### 4. Execute o projeto
-
-```bash
-npm run dev
-```
-
----
-
 ## 📡 Exemplo de Uso
 
 **Pergunta:**
@@ -203,21 +171,6 @@ Contribuições são bem-vindas!
 3. Commit suas mudanças
 4. Push para a branch
 5. Abra um Pull Request
-
----
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT.
-
----
-
-## 📬 Contato
-
-Caso queira saber mais ou contribuir com o projeto:
-
-* 💼 LinkedIn: (adicione aqui)
-* 📧 Email: (adicione aqui)
 
 ---
 
